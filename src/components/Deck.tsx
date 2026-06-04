@@ -119,49 +119,7 @@ export default function Deck() {
         )}
       </AnimatePresence>
 
-      {/* Control Bar */}
-      <div className="fixed bottom-0 w-full h-16 bg-neutral-950 flex items-center justify-between px-6 border-t border-neutral-800 z-50 text-neutral-400 font-sans">
-        <div className="flex items-center gap-4">
-          <button 
-            onClick={prevSlide}
-            disabled={currentSlide === 0}
-            className="p-2 hover:text-white disabled:opacity-30 transition-colors"
-          >
-            <ChevronLeft size={32} />
-          </button>
-          
-          <div className="font-bold text-lg min-w-24 text-center text-white">
-            {currentSlide + 1} / {slides.length}
-          </div>
-          
-          <button 
-            onClick={nextSlide}
-            disabled={currentSlide === slides.length - 1}
-            className="p-2 hover:text-white disabled:opacity-30 transition-colors"
-          >
-            <ChevronRight size={32} />
-          </button>
-        </div>
-        
-        <div className="flex items-center gap-6">
-          <button
-            onClick={() => setShowNotes(!showNotes)}
-            className={`flex items-center gap-2 px-6 py-2 rounded font-bold transition-colors ${
-              showNotes ? 'bg-yellow-500 text-black' : 'bg-neutral-800 text-white hover:bg-neutral-700'
-            }`}
-          >
-            <MessageSquareText size={20} />
-            Notes (N)
-          </button>
-          
-          <button 
-            onClick={toggleFullScreen}
-            className="p-2 hover:text-white transition-colors"
-          >
-            <Maximize size={24} />
-          </button>
-        </div>
-      </div>
+
     </div>
   );
 }

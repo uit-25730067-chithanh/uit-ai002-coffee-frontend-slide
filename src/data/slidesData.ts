@@ -13,6 +13,7 @@ export type Slide = {
   chartData?: { label: string; value: number }[];
   disclaimer?: string;
   speakerNotes: string;
+  image?: string;
 };
 
 export const slides: Slide[] = [
@@ -26,7 +27,7 @@ export const slides: Slide[] = [
     members: [
       { name: "Đào Vĩnh Bảo Phúc", role: "Nhóm trưởng - 25730053" },
       { name: "Tăng Phước Thịnh", role: "Thành viên - 25730071" },
-      { name: "Đặng Chí Thanh", role: "Thành viên - 25730063" },
+      { name: "Đặng Chí Thanh", role: "Thành viên - 25730067" },
       { name: "Hoàng Cao Sơn", role: "Thành viên - 25730061" }
     ],
     speakerNotes: "Xin chào Thầy và các bạn. Hôm nay Nhóm 10 xin đại diện trình bày đồ án cuối kỳ môn Tư duy Trí tuệ Nhân tạo với đề tài DT10: AI dự báo kế hoạch canh tác mùa vụ và giá cà phê cho nông dân Tây Nguyên. Trọng tâm của đồ án không nằm ở việc xây dựng mô hình Deep Learning phức tạp mà tập trung vào việc áp dụng tư duy thiết kế hệ thống AI bền vững và có trách nhiệm đến tay người nông dân nhỏ lẻ."
@@ -64,7 +65,7 @@ export const slides: Slide[] = [
     slideNumber: "1.3",
     layout: "profile",
     title: "Đặng Chí Thanh",
-    subtitle: "MSSV: 25730063",
+    subtitle: "MSSV: 25730067",
     content: [
       "Kỹ thuật Machine Learning (Feature Engineering, Random Forest).",
       "Phát triển Backend API bằng FastAPI.",
@@ -92,6 +93,7 @@ export const slides: Slide[] = [
     slideNumber: "2",
     layout: "bullets",
     title: "Bối cảnh & Vấn đề Nông hộ",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Coffee_Farmer.jpg",
     content: [
       "Biến đổi khí hậu cực đoan: Nhiệt độ tăng, lượng mưa thất thường ảnh hưởng trực tiếp năng suất.",
       "Bất đối xứng thông tin thị trường: Nông dân thiếu dữ liệu khách quan, dễ bị ép giá.",
@@ -227,6 +229,7 @@ export const slides: Slide[] = [
     slideNumber: "11",
     layout: "bullets",
     title: "Giao diện Di động (Mobile UI)",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Coffee_Farmers.jpg",
     content: [
       "Định hướng thiết kế Neo-Brutalism: Tương phản cao, phù hợp đọc dưới nắng gắt ngoài rẫy.",
       "Biệt lập tác vụ: Phân tách rõ luồng 'Dự báo Giá' và 'Khuyến nghị Canh tác'.",

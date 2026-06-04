@@ -19,24 +19,31 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
     case 'cover':
       return (
         <div className="w-full h-full flex flex-col justify-center bg-white p-16 relative">
-          <div className="absolute top-12 left-16 right-16 flex justify-between items-center pb-4">
-            <span className="text-xl font-bold text-blue-900 uppercase tracking-widest">Trường Đại học Công nghệ Thông tin - ĐHQG-HCM</span>
-          </div>
-          <div className="border-l-8 border-blue-900 pl-8 mb-12 mt-12">
-            <h1 className="text-5xl font-bold text-blue-950 leading-tight mb-4">{slide.title}</h1>
-            <h2 className="text-2xl text-blue-800 font-medium">{slide.subtitle}</h2>
-            {slide.content?.map((text, i) => (
-              <p key={i} className="text-xl text-gray-700 mt-4">{text}</p>
-            ))}
-          </div>
-          
-          <div className="grid grid-cols-2 gap-x-12 gap-y-4 max-w-4xl border-t border-gray-300 pt-8 mt-auto">
-            {slide.members?.map((m, i) => (
-              <div key={i} className="flex flex-col">
-                <span className="text-xl font-bold text-blue-900">{m.name}</span>
-                <span className="text-lg text-gray-600">{m.role}</span>
-              </div>
-            ))}
+          {slide.image && (
+            <div className="absolute inset-0 z-0">
+              <img src={slide.image} alt="Coffee Farmer" className="w-full h-full object-cover opacity-20" />
+            </div>
+          )}
+          <div className="z-10 relative flex flex-col h-full">
+            <div className="absolute top-0 left-0 right-0 flex justify-between items-center pb-4">
+              <span className="text-xl font-bold text-blue-900 uppercase tracking-widest bg-white/80 px-4 py-1 rounded">Trường Đại học Công nghệ Thông tin - ĐHQG-HCM</span>
+            </div>
+            <div className="border-l-8 border-blue-900 pl-8 mb-12 mt-20 bg-white/80 p-4 rounded-r-lg max-w-4xl">
+              <h1 className="text-5xl font-bold text-blue-950 leading-tight mb-4">{slide.title}</h1>
+              <h2 className="text-2xl text-blue-800 font-medium">{slide.subtitle}</h2>
+              {slide.content?.map((text, i) => (
+                <p key={i} className="text-xl text-gray-700 mt-4 font-bold">{text}</p>
+              ))}
+            </div>
+            
+            <div className="grid grid-cols-2 gap-x-12 gap-y-4 max-w-4xl border-t-4 border-blue-900 pt-8 mt-auto bg-white/90 p-8 rounded-lg shadow-sm">
+              {slide.members?.map((m, i) => (
+                <div key={i} className="flex flex-col">
+                  <span className="text-xl font-bold text-blue-900">{m.name}</span>
+                  <span className="text-lg text-gray-700 font-medium">{m.role}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       );
@@ -74,32 +81,39 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
 
     case 'bullets':
       return (
-        <div className="w-full h-full p-16 flex flex-col bg-white overflow-hidden">
+        <div className="w-full h-full p-16 flex flex-col bg-white overflow-hidden relative">
           <PPTHeader title={slide.title} />
           
-          <div className="flex-1 px-8 mt-4 overflow-y-auto">
-            <ul className="space-y-8">
-              {slide.content?.map((item, i) => {
-                const isHeading = !item.includes(':') && (item.endsWith(':') || item.includes('Kết luận:') || item.includes('Hướng phát triển:') || item.includes('Nhấn mạnh:'));
-                if (isHeading) {
+          <div className={`flex-1 mt-4 overflow-y-auto ${slide.image ? 'flex gap-12' : ''}`}>
+            <div className={`${slide.image ? 'w-3/5 shrink-0' : 'w-full'}`}>
+              <ul className="space-y-8 px-8">
+                {slide.content?.map((item, i) => {
+                  const isHeading = !item.includes(':') && (item.endsWith(':') || item.includes('Kết luận:') || item.includes('Hướng phát triển:') || item.includes('Nhấn mạnh:'));
+                  if (isHeading) {
+                    return (
+                      <li key={i} className={`flex gap-4 items-start text-3xl font-bold text-blue-900 mt-12`}>
+                        <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                      </li>
+                    )
+                  }
                   return (
-                    <li key={i} className={`flex gap-4 items-start text-3xl font-bold text-blue-900 mt-12`}>
-                      <span dangerouslySetInnerHTML={{ __html: item }}></span>
+                    <li key={i} className={`flex gap-4 items-start text-2xl text-gray-800 pl-4`}>
+                      <span className="text-blue-600 font-bold text-3xl leading-none shrink-0">•</span>
+                      <span dangerouslySetInnerHTML={{ __html: item.replace(/^([^:]+):/g, '<b>$1:</b>') }}></span>
                     </li>
-                  )
-                }
-                return (
-                  <li key={i} className={`flex gap-4 items-start text-2xl text-gray-800 pl-4`}>
-                    <span className="text-blue-600 font-bold text-3xl leading-none shrink-0">•</span>
-                    <span dangerouslySetInnerHTML={{ __html: item.replace(/^([^:]+):/g, '<b>$1:</b>') }}></span>
-                  </li>
-                );
-              })}
-            </ul>
+                  );
+                })}
+              </ul>
+            </div>
+            {slide.image && (
+              <div className="w-2/5 flex items-center justify-center pt-8">
+                <img src={slide.image} alt={slide.title} className="w-full max-h-[450px] object-cover rounded-2xl shadow-xl border-4 border-white" />
+              </div>
+            )}
           </div>
           
           {slide.disclaimer && (
-            <div className="mt-8 bg-gray-100 border-l-4 border-red-500 p-4 text-xl text-gray-700 italic shrink-0">
+            <div className="mt-8 bg-gray-100 border-l-4 border-red-500 p-4 text-xl text-gray-700 italic shrink-0 relative z-10">
               <strong>Lưu ý: </strong> {slide.disclaimer}
             </div>
           )}
@@ -270,17 +284,24 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
 
     case 'thankyou':
       return (
-        <div className="w-full h-full flex flex-col items-center justify-center bg-blue-900 p-16 text-center text-white relative">
-          <div className="absolute top-16 left-0 w-full text-center">
+        <div className="w-full h-full flex flex-col items-center justify-center bg-blue-950 p-16 text-center text-white relative">
+          {slide.image && (
+            <div className="absolute inset-0 z-0">
+              <img src={slide.image} alt="Coffee Farm Background" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
+            </div>
+          )}
+          <div className="absolute top-16 left-0 w-full text-center z-10">
             <span className="text-2xl font-bold text-blue-200 uppercase tracking-widest opacity-80">Trường Đại học Công nghệ Thông tin - ĐHQG-HCM</span>
           </div>
-          <h1 className="text-6xl font-bold mb-6 tracking-wide uppercase">{slide.title}</h1>
-          <hr className="w-64 border-2 border-white mb-6 opacity-50 mx-auto" />
-          <h2 className="text-4xl text-blue-200 font-bold mb-16">{slide.subtitle}</h2>
-          
-          {slide.content?.map((item, i) => (
-             <p key={i} className="text-2xl text-blue-100">{item}</p>
-          ))}
+          <div className="z-10 flex flex-col items-center justify-center mt-12">
+            <h1 className="text-6xl font-bold mb-6 tracking-wide uppercase">{slide.title}</h1>
+            <hr className="w-64 border-2 border-white mb-6 opacity-50 mx-auto" />
+            <h2 className="text-4xl text-blue-200 font-bold mb-16">{slide.subtitle}</h2>
+            
+            {slide.content?.map((item, i) => (
+               <p key={i} className="text-2xl text-blue-100">{item}</p>
+            ))}
+          </div>
         </div>
       );
 
