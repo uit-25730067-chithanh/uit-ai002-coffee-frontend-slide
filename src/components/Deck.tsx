@@ -5,7 +5,25 @@ import { slides } from '../data/slidesData';
 import SlideRenderer from './SlideRenderer';
 
 export default function Deck() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const slideParam = params.get('slide');
+    if (slideParam) {
+      const parsed = parseInt(slideParam, 10);
+      if (!isNaN(parsed) && parsed >= 1 && parsed <= slides.length) {
+        return parsed - 1;
+      }
+    }
+    return 0;
+  });
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    params.set('slide', (currentSlide + 1).toString());
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState({}, '', newUrl);
+  }, [currentSlide]);
+
   const [showNotes, setShowNotes] = useState(false);
   const [scale, setScale] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);

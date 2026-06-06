@@ -24,6 +24,7 @@ export const slides: Slide[] = [
     title: "AI Hỗ Trợ Canh Tác & Dự Báo Giá Cà Phê",
     subtitle: "Đề tài DT10 - Tư duy Trí tuệ Nhân tạo (AI002)",
     content: ["Giảng viên hướng dẫn: TS. Phan Thế Duy"],
+    image: "/cover-image.png",
     members: [
       { name: "Đào Vĩnh Bảo Phúc", role: "Nhóm trưởng - 25730053" },
       { name: "Tăng Phước Thịnh", role: "Thành viên - 25730071" },
@@ -93,7 +94,7 @@ export const slides: Slide[] = [
     slideNumber: "2",
     layout: "bullets",
     title: "Bối cảnh & Vấn đề Nông hộ",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Coffee_Farmer.jpg",
+    image: "/slide-06.png",
     content: [
       "Biến đổi khí hậu cực đoan: Nhiệt độ tăng, lượng mưa thất thường ảnh hưởng trực tiếp năng suất.",
       "Bất đối xứng thông tin thị trường: Nông dân thiếu dữ liệu khách quan, dễ bị ép giá.",
