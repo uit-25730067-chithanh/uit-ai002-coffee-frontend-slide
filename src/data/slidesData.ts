@@ -3,7 +3,7 @@ export type Slide = {
   slideNumber: string;
   title: string;
   subtitle?: string;
-  layout: "cover" | "profile" | "bullets" | "flow" | "architecture" | "metrics" | "chart" | "split" | "thankyou";
+  layout: "cover" | "profile" | "bullets" | "flow" | "architecture" | "metrics" | "chart" | "split" | "thankyou" | "ui-preview" | "bias-impact";
   content?: string[];
   leftContent?: string[];
   rightContent?: string[];
@@ -193,7 +193,7 @@ export const slides: Slide[] = [
   {
     id: 13,
     slideNumber: "9",
-    layout: "split",
+    layout: "bias-impact",
     title: "Bias & Social Impact",
     leftContent: [
       "Thiên lệch địa lý (Bias):",
@@ -228,9 +228,8 @@ export const slides: Slide[] = [
   {
     id: 15,
     slideNumber: "11",
-    layout: "bullets",
+    layout: "ui-preview",
     title: "Giao diện Di động (Mobile UI)",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Coffee_Farmers.jpg",
     content: [
       "Định hướng thiết kế Neo-Brutalism: Tương phản cao, phù hợp đọc dưới nắng gắt ngoài rẫy.",
       "Biệt lập tác vụ: Phân tách rõ luồng 'Dự báo Giá' và 'Khuyến nghị Canh tác'.",
