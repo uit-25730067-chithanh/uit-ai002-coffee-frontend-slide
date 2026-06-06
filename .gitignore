@@ -1,8 +1,50 @@
+# Dependencies
 node_modules/
-build/
+
+# Production / Builds
 dist/
+build/
+
+# Testing
 coverage/
-.DS_Store
-*.log
+
+# Environment Variables
+.env
+.env.local
 .env*
 !.env.example
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.log
+
+# Project Documentation & Plans
+plans/
+CLAUDE.md
+AGENTS.md
+
+# AI Tooling & Editor configs
+.claude/
+!.claude/rules/
+.claude/memory/
+.claude/hooks/.logs/
+.claude/sessions/
+.claude/backups/
+.claude/*.json
+.windsurf/
+
+# Temporary / Scratchpad
+tmp/
+notes/
+scratch/
+slide/
+docs/journals
+docs/knowledge-base
+.github-management/
+
+# Project Harness (Private)
+docs/harness/
+docs/product/
+docs/stories/
+docs/decisions/
