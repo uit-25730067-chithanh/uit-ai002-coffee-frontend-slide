@@ -3,13 +3,6 @@ import { Slide } from '../data/slidesData';
 import { motion } from 'motion/react';
 
 export default function SlideRenderer({ slide }: { slide: Slide }) {
-  const getImageUrl = (imagePath?: string) => {
-    if (!imagePath) return '';
-    if (imagePath.startsWith('http')) return imagePath;
-    const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
-    return `${import.meta.env.BASE_URL}${cleanPath}`;
-  };
-
   
   // Powerpoint header template
   const PPTHeader = ({ title }: { title: string }) => (
@@ -28,7 +21,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
         <div className="w-full h-full flex flex-col p-16 relative bg-white overflow-hidden">
           {slide.image && (
             <div className="absolute top-0 right-0 w-[75%] h-full z-0">
-              <img src={getImageUrl(slide.image)} alt="Cover Background" className="w-full h-full object-cover object-center" />
+              <img src={slide.image} alt="Cover Background" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent" />
             </div>
           )}
@@ -124,7 +117,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
             </div>
             {slide.image && (
               <div className="w-[45%] h-full relative">
-                <img src={getImageUrl(slide.image)} alt={slide.title} className="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-neutral-200" />
+                <img src={slide.image} alt={slide.title} className="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-neutral-200" />
               </div>
             )}
           </div>
@@ -846,7 +839,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                    <div className="flex-1 relative flex items-start justify-center p-0 pt-0">
                       <div className="relative w-full h-[28rem] flex items-center justify-center">
                          <img 
-                           src={getImageUrl("/map-bias.png")} 
+                           src="/map-bias.png" 
                            alt="Bản đồ thiên lệch dữ liệu" 
                            className="max-w-[110%] w-full h-full object-contain drop-shadow-sm transition-transform hover:scale-[1.02] origin-top -translate-x-4"
                            onError={(e) => {
@@ -1045,7 +1038,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
         <div className="w-full h-full flex flex-col items-center justify-center bg-blue-950 p-16 text-center text-white relative">
           {slide.image && (
             <div className="absolute inset-0 z-0">
-              <img src={getImageUrl(slide.image)} alt="Coffee Farm Background" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
+              <img src={slide.image} alt="Coffee Farm Background" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
             </div>
           )}
           <div className="absolute top-16 left-0 w-full text-center z-10">
