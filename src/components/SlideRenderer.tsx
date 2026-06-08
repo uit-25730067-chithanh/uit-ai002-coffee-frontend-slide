@@ -244,28 +244,28 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
 
     case "flow":
       return (
-        <div className="w-full h-full p-10 flex flex-col bg-white">
+        <div className="w-full h-full p-8 flex flex-col bg-white">
           <PPTHeader title={slide.title} />
 
           {/* Top part: 3 Column Process Diagram */}
-          <div className="flex-1 flex justify-between items-stretch mt-6 mb-4 px-4 gap-4 min-h-0">
+          <div className="flex-1 flex justify-between items-stretch mt-4 mb-4 px-2 gap-4 min-h-0">
             {/* Step 1 */}
             <div className="flex-1 flex flex-col relative z-10">
-              <div className="bg-blue-900 text-white rounded-t-2xl p-4 flex flex-col items-center text-center relative border border-blue-900 shadow-md">
-                <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold border-4 border-white shadow-sm">
+              <div className="bg-blue-900 text-white rounded-t-2xl py-2.5 px-3 flex flex-col items-center text-center relative border border-blue-900 shadow-md">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-bold border-3 border-white shadow-sm">
                   1
                 </div>
-                <h3 className="font-bold text-2xl mt-4 mb-1 tracking-wide text-white">
+                <h3 className="font-bold text-xl mt-3 mb-0.5 tracking-wide text-white">
                   Dữ liệu thô hằng ngày
                 </h3>
-                <p className="italic text-blue-100 font-serif text-base">
+                <p className="italic text-blue-100 font-serif text-sm">
                   Raw Daily Prices & Weather
                 </p>
               </div>
-              <div className="flex-1 bg-white border-2 border-blue-100 border-t-0 rounded-b-2xl p-4 flex flex-col justify-between shadow-sm">
-                <div className="grid grid-cols-3 gap-2 mt-1">
+              <div className="flex-1 bg-white border-2 border-blue-100 border-t-0 rounded-b-2xl p-3 flex flex-col justify-between shadow-sm">
+                <div className="grid grid-cols-3 gap-1 mt-1">
                   <div className="flex flex-col items-center text-center gap-1">
-                    <div className="relative h-14 w-14 mb-1 text-blue-700/80">
+                    <div className="relative h-10 w-10 mb-0.5 text-blue-700/80">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -283,12 +283,12 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                         <path d="M21 3v6" />
                       </svg>
                     </div>
-                    <p className="text-sm font-medium text-gray-700 leading-snug">
+                    <p className="text-xs font-semibold text-gray-700 leading-tight">
                       Dữ liệu giá cà phê hằng ngày
                     </p>
                   </div>
                   <div className="flex flex-col items-center text-center gap-1">
-                    <div className="h-14 w-14 text-blue-400 mb-1">
+                    <div className="h-10 w-10 text-blue-400 mb-0.5">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -304,12 +304,12 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                         <path d="M12 16v6" />
                       </svg>
                     </div>
-                    <p className="text-sm font-medium text-gray-700 leading-snug">
+                    <p className="text-xs font-semibold text-gray-700 leading-tight">
                       Dữ liệu thời tiết hằng ngày
                     </p>
                   </div>
                   <div className="flex flex-col items-center text-center gap-1">
-                    <div className="h-14 w-14 text-blue-900 mb-1">
+                    <div className="h-10 w-10 text-blue-900 mb-0.5">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -325,22 +325,22 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                         <path d="M3 19c0 1.66 4 3 9 3s9-1.34 9-3" />
                       </svg>
                     </div>
-                    <p className="text-sm font-medium text-gray-700 leading-snug">
+                    <p className="text-xs font-semibold text-gray-700 leading-tight">
                       Đầu vào thô
                       <br />
                       (raw input)
                     </p>
                   </div>
                 </div>
-                <div className="mt-4 pt-3 border-t border-blue-100 flex items-center justify-center gap-2 text-blue-900 font-semibold bg-gray-50/50 rounded-lg p-2 text-base z-30">
-                  <div className="p-1 border border-blue-900 rounded bg-white text-blue-900 shadow-sm">
+                <div className="mt-2 pt-2 border-t border-blue-100 flex items-center justify-center gap-2 text-blue-900 font-semibold bg-gray-50/50 rounded-lg p-1.5 text-sm z-30">
+                  <div className="p-1 border border-blue-900 rounded bg-white text-blue-900 shadow-sm flex items-center justify-center">
                     <svg
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2"
+                      strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
@@ -355,28 +355,28 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
             </div>
 
             {/* Connecting Arrow 1 */}
-            <div className="flex items-center justify-center w-8 shrink-0 relative mt-16">
-              <div className="absolute h-1.5 bg-blue-800 w-16 z-0"></div>
-              <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-blue-800 border-b-[8px] border-b-transparent absolute left-8"></div>
+            <div className="flex items-center justify-center w-8 shrink-0 relative self-center">
+              <div className="absolute h-1 bg-blue-800 w-16 z-0"></div>
+              <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-blue-800 border-b-[6px] border-b-transparent absolute left-8"></div>
             </div>
 
             {/* Step 2 */}
             <div className="flex-1 flex flex-col relative z-10">
-              <div className="bg-blue-800 text-white rounded-t-2xl p-4 flex flex-col items-center text-center relative border border-blue-800 shadow-md">
-                <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 bg-blue-800 text-white rounded-full flex items-center justify-center text-2xl font-bold border-4 border-white shadow-sm">
+              <div className="bg-blue-800 text-white rounded-t-2xl py-2.5 px-3 flex flex-col items-center text-center relative border border-blue-800 shadow-md">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-blue-800 text-white rounded-full flex items-center justify-center text-xl font-bold border-3 border-white shadow-sm">
                   2
                 </div>
-                <h3 className="font-bold text-2xl mt-4 mb-1 tracking-wide text-white">
+                <h3 className="font-bold text-xl mt-3 mb-0.5 tracking-wide text-white">
                   Dataset Tuần
                 </h3>
-                <p className="text-blue-100 font-semibold text-base drop-shadow-sm">
+                <p className="text-blue-100 font-semibold text-sm drop-shadow-sm">
                   2520 dòng
                 </p>
               </div>
-              <div className="flex-1 bg-white border-2 border-blue-100 border-t-0 rounded-b-2xl p-4 flex flex-col justify-between shadow-sm">
-                <div className="flex justify-around items-center h-full px-2 pt-2">
+              <div className="flex-1 bg-white border-2 border-blue-100 border-t-0 rounded-b-2xl p-3 flex flex-col justify-between shadow-sm">
+                <div className="flex justify-around items-center h-full px-1 pt-1">
                   <div className="flex flex-col items-center">
-                    <div className="h-16 w-16 text-blue-500/80 mb-2 relative">
+                    <div className="h-11 w-11 text-blue-500/80 mb-1 relative">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -411,7 +411,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                         <path d="M12 18h.01" />
                         <path d="M16 18h.01" />
                       </svg>
-                      <div className="absolute -bottom-2 -right-2 bg-blue-800 rounded-full w-6 h-6 flex items-center justify-center border-2 border-white text-white">
+                      <div className="absolute -bottom-1 -right-1 bg-blue-800 rounded-full w-5 h-5 flex items-center justify-center border-2 border-white text-white">
                         <svg
                           viewBox="0 0 24 24"
                           fill="none"
@@ -419,36 +419,36 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                           strokeWidth="3"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className="w-3 h-3"
+                          className="w-2.5 h-2.5"
                         >
                           <polyline points="20 6 9 17 4 12" />
                         </svg>
                       </div>
                     </div>
                   </div>
-                  <div className="w-px h-16 bg-gray-200"></div>
+                  <div className="w-px h-12 bg-gray-200"></div>
                   <div className="flex flex-col items-center text-center">
-                    <div className="h-12 w-12 text-blue-700/80 mb-2 relative flex items-end justify-center gap-1">
-                      <div className="w-3 bg-blue-400 rounded-t-sm h-4"></div>
-                      <div className="w-3 bg-blue-600 rounded-t-sm h-8"></div>
-                      <div className="w-3 bg-blue-800 rounded-t-sm h-12"></div>
+                    <div className="h-10 w-10 text-blue-700/80 mb-1 relative flex items-end justify-center gap-0.5">
+                      <div className="w-2.5 bg-blue-400 rounded-t-sm h-3"></div>
+                      <div className="w-2.5 bg-blue-600 rounded-t-sm h-6"></div>
+                      <div className="w-2.5 bg-blue-800 rounded-t-sm h-9"></div>
                     </div>
-                    <p className="text-sm font-medium text-gray-700">
+                    <p className="text-xs font-semibold text-gray-700">
                       Tổng hợp
                       <br />
                       theo tuần
                     </p>
                   </div>
                 </div>
-                <div className="mt-4 pt-3 border-t border-blue-100 flex items-center justify-center gap-2 text-blue-900 font-semibold bg-gray-50/50 rounded-lg p-2 text-base z-30">
-                  <div className="p-1 border border-blue-900 rounded-full bg-white text-blue-900 shadow-sm">
+                <div className="mt-2 pt-2 border-t border-blue-100 flex items-center justify-center gap-2 text-blue-900 font-semibold bg-gray-50/50 rounded-lg p-1.5 text-sm z-30">
+                  <div className="p-1 border border-blue-900 rounded-full bg-white text-blue-900 shadow-sm flex items-center justify-center">
                     <svg
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2"
+                      strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
@@ -461,28 +461,28 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
             </div>
 
             {/* Connecting Arrow 2 */}
-            <div className="flex items-center justify-center w-8 shrink-0 relative mt-16">
-              <div className="absolute h-1.5 bg-blue-900 w-16 z-0"></div>
-              <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-blue-900 border-b-[8px] border-b-transparent absolute left-8"></div>
+            <div className="flex items-center justify-center w-8 shrink-0 relative self-center">
+              <div className="absolute h-1 bg-blue-900 w-16 z-0"></div>
+              <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-blue-900 border-b-[6px] border-b-transparent absolute left-8"></div>
             </div>
 
             {/* Step 3 */}
             <div className="flex-1 flex flex-col relative z-10">
-              <div className="bg-blue-900 text-white rounded-t-2xl p-4 flex flex-col items-center text-center relative border border-blue-900 shadow-md">
-                <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold border-4 border-white shadow-sm">
+              <div className="bg-blue-900 text-white rounded-t-2xl py-2.5 px-3 flex flex-col items-center text-center relative border border-blue-900 shadow-md">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-bold border-3 border-white shadow-sm">
                   3
                 </div>
-                <h3 className="font-bold text-2xl mt-4 mb-1 tracking-wide text-white">
+                <h3 className="font-bold text-xl mt-3 mb-0.5 tracking-wide text-white">
                   Dataset Tháng
                 </h3>
-                <p className="text-cyan-50 font-semibold text-base drop-shadow-sm">
+                <p className="text-cyan-50 font-semibold text-sm drop-shadow-sm">
                   576 dòng • Baseline
                 </p>
               </div>
-              <div className="flex-1 bg-white border-2 border-blue-100 border-t-0 rounded-b-2xl p-4 flex flex-col justify-between shadow-sm">
-                <div className="flex justify-around items-center h-full px-2 pt-2">
+              <div className="flex-1 bg-white border-2 border-blue-100 border-t-0 rounded-b-2xl p-3 flex flex-col justify-between shadow-sm">
+                <div className="flex justify-around items-center h-full px-1 pt-1">
                   <div className="flex flex-col items-center relative">
-                    <div className="h-16 w-16 text-blue-400/80 mb-2 relative">
+                    <div className="h-11 w-11 text-blue-400/80 mb-1 relative">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -526,9 +526,9 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                       </svg>
                     </div>
                   </div>
-                  <div className="w-px h-16 bg-gray-200"></div>
+                  <div className="w-px h-12 bg-gray-200"></div>
                   <div className="flex flex-col items-center text-center">
-                    <div className="h-12 w-12 text-blue-900 mb-2 relative">
+                    <div className="h-10 w-10 text-blue-900 mb-1 relative">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -549,26 +549,26 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                         <line x1="8" y1="21" x2="16" y2="21" />
                         <line x1="12" y1="17" x2="12" y2="21" />
                       </svg>
-                      <div className="absolute inset-x-2 top-2 bottom-6 border border-blue-200 rounded flex items-center justify-center bg-blue-50/50">
-                        <span className="font-mono text-[9px] font-bold text-blue-800">
+                      <div className="absolute inset-x-1.5 top-1.5 bottom-5 border border-blue-200 rounded flex items-center justify-center bg-blue-50/50">
+                        <span className="font-mono text-[8px] font-bold text-blue-800">
                           AI
                         </span>
                       </div>
                     </div>
-                    <p className="text-sm font-medium text-gray-700 leading-tight w-24">
+                    <p className="text-xs font-semibold text-gray-700 leading-tight w-20">
                       Dữ liệu đầu vào cho mô hình baseline
                     </p>
                   </div>
                 </div>
-                <div className="mt-4 pt-3 border-t border-blue-100 flex items-center justify-center gap-2 text-blue-900 font-semibold bg-gray-50/50 rounded-lg p-2 text-base z-30">
-                  <div className="p-1 border border-blue-900 rounded-full bg-white text-blue-900 shadow-sm">
+                <div className="mt-2 pt-2 border-t border-blue-100 flex items-center justify-center gap-2 text-blue-900 font-semibold bg-gray-50/50 rounded-lg p-1.5 text-sm z-30">
+                  <div className="p-1 border border-blue-900 rounded-full bg-white text-blue-900 shadow-sm flex items-center justify-center">
                     <svg
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2"
+                      strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
@@ -582,8 +582,8 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
             </div>
           </div>
 
-          {/* Bottom part: 3 Features horizontally */}
-          <div className="grid grid-cols-3 gap-4 px-4 mt-2 mb-4">
+          {/* Bottom part: 4 Features horizontally */}
+          <div className="grid grid-cols-4 gap-4 px-4 mt-2 mb-4">
             {slide.content?.map((item, i) => {
               const parts = item.split(":");
               const title = parts[0]?.trim();
@@ -591,12 +591,12 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
               return (
                 <div
                   key={i}
-                  className="flex gap-4 items-center bg-orange-50/50 border border-orange-200/60 rounded-xl p-4 shadow-sm min-h-[5rem]"
+                  className="flex gap-3 items-center bg-orange-50/50 border border-orange-200/60 rounded-xl p-3 shadow-sm min-h-[4.5rem]"
                 >
-                  <div className="w-12 h-12 bg-blue-800 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
+                  <div className="w-9 h-9 bg-blue-800 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
                     <svg
-                      width="24"
-                      height="24"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -608,10 +608,10 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-blue-900 mb-0.5">
+                    <h4 className="text-base font-bold text-blue-900 mb-0.5">
                       {title}
                     </h4>
-                    <p className="text-base text-gray-700 leading-[1.2]">
+                    <p className="text-sm text-gray-700 leading-snug">
                       {desc}
                     </p>
                   </div>
