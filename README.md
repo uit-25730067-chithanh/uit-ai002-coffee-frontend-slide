@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" alt="AI Studio Banner" width="100%" style="border-radius: 8px;">
+  <img src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" alt="Team 10 Banner" width="100%" style="border-radius: 8px;">
 
 # [AI002] Slide Web App — AI Dự Báo Canh Tác & Giá Cà Phê — Nhóm 10
 
@@ -126,12 +126,10 @@ Bấm biểu tượng mở rộng hoặc nhấn `F11` trên trình duyệt để
 
 ## Danh sách Nhóm (Nhóm 10)
 
-| MSSV     | Họ và Tên         | Vai trò                                   | Trục AI Phụ trách           | GitHub                                                             |
-| :------- | :---------------- | :---------------------------------------- | :-------------------------- | :----------------------------------------------------------------- |
-| 25730053 | Đào Vĩnh Bảo Phúc | Trưởng nhóm, Kỹ thuật Dữ liệu, Frontend   | Social Impact               |                                                                    |
-| 25730071 | Tăng Phước Thịnh  | Crawl Dữ liệu, Phân tích nghiệp vụ        | Hỗ trợ chung                |                                                                    |
-| 25730067 | Đặng Chí Thanh    | Kỹ thuật ML, Backend API                  | Reliability, Explainability | [@uit-25730067-chithanh](https://github.com/uit-25730067-chithanh) |
-| 25730061 | Hoàng Cao Sơn     | Data Audit, Đánh giá mô hình, Stress test | Robustness, Bias            | [@uit-25730061-caoson](https://github.com/uit-25730061-caoson)     |
+| MSSV     | Họ và Tên      | Vai trò                                            | Trục AI Phụ trách                          | GitHub                                                             |
+| :------- | :------------- | :------------------------------------------------- | :----------------------------------------- | :----------------------------------------------------------------- |
+| 25730067 | Đặng Chí Thanh | Trưởng nhóm, Kỹ thuật ML, Backend API, Frontend    | Reliability, Explainability, Social Impact | [@uit-25730067-chithanh](https://github.com/uit-25730067-chithanh) |
+| 25730061 | Hoàng Cao Sơn  | Data Audit, Crawler, Đánh giá mô hình, Stress test | Robustness, Bias                           | [@uit-25730061-caoson](https://github.com/uit-25730061-caoson)     |
 
 ---
 

@@ -38,12 +38,12 @@ export const slides: Slide[] = [
     title: "Đặng Chí Thanh",
     subtitle: "Trưởng nhóm - MSSV: 25730067",
     content: [
-      "Kỹ thuật Machine Learning (Feature Engineering, Random Forest).",
-      "Phát triển Backend API bằng FastAPI và xây dựng Web UI (Frontend).",
-      "Phụ trách AI Bền vững: Trục Reliability (Tính tin cậy).",
-      "Phụ trách AI Bền vững: Trục Explainability (Tính minh bạch) & Social Impact."
+      "Kỹ thuật Machine Learning (Preprocess dữ liệu, Feature Engineering, Random Forest Baseline).",
+      "Phát triển Backend API bằng FastAPI (Định nghĩa contract API).",
+      "Xây dựng Web UI (Frontend) và tích hợp liên kết API với giao diện trực quan.",
+      "Phụ trách AI Bền vững: Trục Reliability (Tính tin cậy), Transparency (Minh bạch) & Social Impact."
     ],
-    speakerNotes: "Nêu bật quá trình thiết kế lõi AI kiểm soát mức độ quan trọng của đặc trưng (Feature Importance), xử lý backend FastAPI và tích hợp giao diện di động React/Vite tối ưu tác động xã hội."
+    speakerNotes: "Nêu bật quá trình thiết kế lõi AI kiểm soát mức độ quan trọng của đặc trưng (Feature Importance), xử lý backend FastAPI và hợp đồng API, tích hợp giao diện frontend React/Vite tối ưu tác động xã hội."
   },
   {
     id: 3,
@@ -53,8 +53,8 @@ export const slides: Slide[] = [
     subtitle: "MSSV: 25730061",
     content: [
       "Đánh giá và kiểm toán dữ liệu (Real Data Audit).",
-      "Thu thập dữ liệu lịch sử giá & thời tiết (Crawler).",
-      "Viết kịch bản stress test tự động cho API.",
+      "Thu thập dữ liệu lịch sử giá & thời tiết (Crawler) và đánh giá độ phủ dữ liệu (Data Coverage).",
+      "Viết kịch bản stress test tự động cho API đánh giá biên độ sai số.",
       "Phụ trách AI Bền vững: Trục Robustness (Kháng nhiễu) & Bias (Tính thiên lệch)."
     ],
     speakerNotes: "Tóm tắt về các phát hiện khi đánh giá độ lệch dữ liệu địa lý giữa các tỉnh, quy trình crawler dữ liệu và quá trình mô phỏng các kịch bản nhiễu cực đoan (Black Swan)."
@@ -93,14 +93,15 @@ export const slides: Slide[] = [
     flowSteps: [
       "Dữ liệu thô hàng ngày (Raw Daily Prices & Weather)",
       "Dataset Tuần (3,972 dòng)",
-      "Dataset Tháng (912 dòng, Baseline)"
+      "Dataset Tháng (912 dòng, 18 cột, 77.96% observed)"
     ],
     content: [
+      "Độ phủ dữ liệu thực tế (Observed coverage): Đạt 77.96% trên toàn bộ dataset tháng.",
       "Giảm nhiễu: Bỏ qua biến động giá ảo trong ngày/tuần.",
       "Tính đồng bộ: Chu kỳ sinh trưởng và thời tiết tương thích theo tháng.",
       "Nguyên lý KISS: Dữ liệu nhỏ gọn, nhẹ nhàng, tối ưu tài nguyên."
     ],
-    speakerNotes: "Chúng tôi cào dữ liệu giá cà phê thực tế hàng ngày và dữ liệu thời tiết. Sau khi lọc nhiễu, chúng tôi tổng hợp thành bộ dữ liệu tháng. Chọn dữ liệu tháng giúp nắm bắt xu hướng trung hạn tốt hơn và bám sát nguyên tắc KISS (Keep It Simple, Stupid), giúp mô hình chạy nhanh và gọn nhẹ."
+    speakerNotes: "Chúng tôi cào dữ liệu giá cà phê thực tế hàng ngày và dữ liệu thời tiết. Sau khi lọc nhiễu, chúng tôi tổng hợp thành bộ dữ liệu tháng với 912 dòng, 18 cột và độ phủ dữ liệu giá quan sát thực tế đạt 77.96%. Chọn dữ liệu tháng giúp nắm bắt xu hướng trung hạn tốt hơn và bám sát nguyên tắc KISS (Keep It Simple, Stupid), giúp mô hình chạy nhanh và gọn nhẹ."
   },
   {
     id: 7,
@@ -123,10 +124,10 @@ export const slides: Slide[] = [
     content: [
       "Mô hình học máy: Random Forest Regressor (Ensemble Bagging).",
       "Cyclic Encoding: Mã hóa chu kỳ tháng bằng hàm Sin/Cos (Giữ tính liền mạch T12-T1).",
-      "Area-based Lags: Đặc trưng tự hồi quy được cô lập theo huyện.",
+      "Area-based Lags: Đặc trưng tự hồi quy được cô lập theo huyện, hiểu là kỳ trước/7 kỳ trước trong baseline monthly.",
       "Mục tiêu cốt lõi: Chống rò rỉ dữ liệu (Data Leakage) chéo địa lý."
     ],
-    speakerNotes: "Chúng tôi chọn Random Forest vì tính ổn định và khả năng xuất Feature Importance. Khi làm feature engineering, chúng tôi xử lý các thuộc tính trễ giá theo từng huyện riêng biệt để tránh rò rỉ dữ liệu huyện này sang huyện khác, đảm bảo tính đúng đắn về mặt thống kê."
+    speakerNotes: "Chúng tôi chọn Random Forest vì tính ổn định và khả năng xuất Feature Importance. Khi làm feature engineering, chúng tôi xử lý các thuộc tính trễ giá theo từng huyện riêng biệt để tránh rò rỉ dữ liệu huyện này sang huyện khác. Các tên biến như lag_1d và lag_7d là tên kế thừa từ pipeline, trong baseline theo tháng cần hiểu là kỳ trước và 7 kỳ trước, không phải lấy lẫn dữ liệu ngày giữa các huyện."
   },
   {
     id: 9,
@@ -141,10 +142,10 @@ export const slides: Slide[] = [
     content: [
       "Trình bày trung thực R² âm do Giới hạn Ngoại suy (Extrapolation Limit).",
       "Tập Train (2020-2024): Miền giá thấp hơn chiếm đa số trong lịch sử cũ.",
-      "Thực tế 2025 (Black Swan): Giá bùng nổ vượt ngưỡng 100k - 131k VND/kg.",
+      "Thực tế 2025 (Black Swan): Giá bùng nổ vượt ngưỡng 100k - 131.5k VND/kg.",
       "Mô hình bị giới hạn bởi trần dữ liệu đã học và xu hướng kéo về trung bình quá khứ."
     ],
-    speakerNotes: "Chúng tôi kiểm thử mô hình trên dữ liệu năm 2025. MAE đạt 14.5k VND/kg và R² bị âm. Chúng tôi trình bày trung thực chỉ số âm này. Nguyên nhân là năm 2025 giá cà phê thực tế tăng phi mã lên hơn 100k/kg, vượt ngoài miền dữ liệu huấn luyện 2020-2024. Mô hình cây quyết định không thể ngoại suy vượt trần tập train. Đây là giới hạn kỹ thuật quan trọng giúp chúng tôi nhận thức rõ tính tin cậy của mô hình khi gặp biến cố lớn."
+    speakerNotes: "Chúng tôi kiểm thử mô hình trên dữ liệu năm 2025. MAE đạt 14.5k VND/kg và R² bị âm. Chúng tôi trình bày trung thực chỉ số âm này. Nguyên nhân là năm 2025 giá cà phê thực tế tăng phi mã lên vùng 100k-131.5k VND/kg, vượt ngoài miền dữ liệu huấn luyện 2020-2024. Mô hình cây quyết định không thể ngoại suy vượt trần tập train. Đây là giới hạn kỹ thuật quan trọng giúp chúng tôi nhận thức rõ tính tin cậy của mô hình khi gặp biến cố lớn."
   },
   {
     id: 10,
@@ -152,13 +153,14 @@ export const slides: Slide[] = [
     layout: "bullets",
     title: "Robustness (Kháng nhiễu)",
     content: [
-      "Bảo vệ 1: Validate request ở tầng API.",
-      "Pydantic schema chặn nhiệt độ, mưa, độ ẩm phi lý ngoài chuỗi hợp lệ.",
-      "Bảo vệ 2: Category Guard theo model đã train.",
-      "Chỉ cho phép dự đoán dựa trên các danh mục (Vùng đất, loại cà) thuộc tập huấn luyện.",
-      "Trả lỗi 422 cảnh báo rõ ràng thay vì suy luận sai âm thầm."
+      "Bảo vệ 1: Validate request ở tầng API chặn dữ liệu dị thường.",
+      "Bảo vệ 2: Category Guard chỉ cho phép dự báo danh mục thuộc tập train.",
+      "Kết quả Stress Test: Khi có cú sốc giá cực đoan, MAE tăng 69.5%.",
+      "Sốc nhiệt 45°C gần như không làm đổi sai số: MAE 14,472 VND/kg (+0.0%).",
+      "Khi kết hợp sốc giá và sốc thời tiết cùng lúc, MAE tăng 69.6%.",
+      "Kết luận: Hệ thống nhạy cảm với sốc giá nhưng chống chịu tốt với sốc thời tiết."
     ],
-    speakerNotes: "Trong repo hiện tại, lớp Robustness được hiện thực bằng validate ở tầng API và kiểm tra category theo model đã train. Nhóm không claim có một sanitizer riêng hay một lớp guardrails cho LLM production, vì các thành phần đó chưa có trong codebase này."
+    speakerNotes: "Trong repo hiện tại, lớp Robustness được hiện thực bằng validate ở tầng API và kiểm tra category theo model đã train. Chúng tôi đã tiến hành kịch bản stress test: khi tạo sốc giá, sai số MAE bị đẩy lên +69.5%; khi tạo heat_wave 45°C, MAE gần như giữ nguyên ở 14,472 VND/kg, tức +0.0%; và khi kết hợp cả sốc giá lẫn sốc thời tiết thì MAE tăng +69.6%. Điều này chứng minh mô hình bị ảnh hưởng chủ yếu bởi biến động giá chứ không bị nhiễu do sai lệch nhỏ của thời tiết."
   },
   {
     id: 11,
@@ -169,7 +171,8 @@ export const slides: Slide[] = [
       "Thiên lệch địa lý (Bias):",
       "Kon Tum: Độ phủ 88.2% | Lâm Đồng: 86.8%.",
       "Đắk Lắk/Gia Lai: Độ phủ trung bình 77.6%.",
-      "Đắk Nông: Phủ 60.5% ➔ Luôn hiển thị cảnh báo tin cậy thấp tại vùng này."
+      "Đắk Nông: Phủ 60.5% ➔ Luôn hiển thị cảnh báo tin cậy thấp tại vùng này.",
+      "Area cần cảnh báo: Gia Nghĩa, Chư Prông, Cư M'gar, Đắk R'lấp."
     ],
     rightContent: [
       "Tác động xã hội (Social Impact):",
@@ -177,7 +180,7 @@ export const slides: Slide[] = [
       "Hỗ trợ xem lại lịch sử Offline (lưu qua localStorage).",
       "Neo chặt Disclaimer dưới chân trang, ngăn rủi ro quyết định sai."
     ],
-    speakerNotes: "Về trục Bias, chúng tôi phát hiện dữ liệu Đắk Nông cào được ít hơn (chỉ 60.5%). Do đó hệ thống sẽ cảnh báo nông dân Đắk Nông rằng độ tin cậy dự báo vùng này thấp hơn Lâm Đồng/Kon Tum để tránh họ ra quyết định sai. Giao diện được tối ưu hóa mobile-first với màn chào rõ ràng, nút lớn tương phản cao chống chói nắng, hỗ trợ lưu trữ cục bộ để xem lịch sử khi mất mạng, và đặc biệt chân trang luôn hiển thị Disclaimer bắt buộc nhằm tránh các rủi ro quyết định kinh tế sai lệch cho người nông dân."
+    speakerNotes: "Về trục Bias, chúng tôi phát hiện dữ liệu Đắk Nông cào được ít hơn (chỉ 60.5%). Các area cần cảnh báo kỹ hơn gồm Gia Nghĩa, Chư Prông, Cư M'gar và Đắk R'lấp vì có nhiều proxy hoặc nội suy hơn. Do đó hệ thống sẽ cảnh báo nông dân ở các vùng dữ liệu yếu rằng độ tin cậy dự báo thấp hơn nhóm vùng có độ phủ tốt như Lâm Đồng/Kon Tum. Giao diện được tối ưu hóa mobile-first với màn chào rõ ràng, nút lớn tương phản cao chống chói nắng, hỗ trợ lưu trữ cục bộ để xem lịch sử khi mất mạng, và đặc biệt chân trang luôn hiển thị Disclaimer bắt buộc nhằm tránh các rủi ro quyết định kinh tế sai lệch cho người nông dân."
   },
   {
     id: 12,
@@ -216,29 +219,27 @@ export const slides: Slide[] = [
     content: [
       "Kết luận:",
       "Đã Vận hành thành công cấu trúc AI End-to-End.",
-      "Tích hợp hiện thực thành công 5 Trụ cột AI Bền vũ vào hệ thống.",
+      "Tích hợp hiện thực thành công 5 Trụ cột AI Bền vững vào hệ thống.",
       "Trung thực báo cáo giới hạn do ngoại suy mô hình cây Quyết định.",
       "Hướng phát triển:",
-      "Xây dựng theo mô hình Time-series hỗ trợ trôi xu hướng (Prophet, XGBoost v2).",
+      "Nghiên cứu mô hình hỗ trợ xu hướng tốt hơn (Linear trend, Prophet, XGBoost v2).",
       "Tiến hành huấn luyện Localized models dành riêng cho các vi khí hậu (tiểu vùng)."
     ],
-    speakerNotes: "Tóm lại, dự án DT10 đã hoàn thiện khung baseline vững chắc và tích hợp Responsible AI vào code thực tế. Trong tương lai, chúng tôi sẽ mở rộng dữ liệu và thử nghiệm các mô hình có khả năng học xu hướng tốt hơn như Prophet hay XGBoost để giải quyết triệt để bài toán ngoại suy khi thị trường biến động cực đoan."
+    speakerNotes: "Tóm lại, dự án DT10 đã hoàn thiện khung baseline Random Forest vững chắc và tích hợp Responsible AI vào code thực tế. Trong tương lai, chúng tôi sẽ mở rộng dữ liệu và nghiên cứu so sánh các hướng có khả năng học xu hướng tốt hơn như linear trend, Prophet hoặc XGBoost v2. Đây là hướng phát triển tương lai, chưa phải mô hình đang vận hành trong repo hiện tại."
   },
   {
     id: 15,
     slideNumber: "13",
     layout: "bullets",
-    title: "Kết luận & Tài liệu Tham khảo",
+    title: "Tài liệu Tham khảo",
     content: [
-      "Nhấn mạnh:",
-      "Đã nhận diện thành công các hạn chế thuật toán.",
-      "Tài liệu tham khảo nổi bật:",
-      "Breiman, L. (2001). Random Forests. Machine Learning.",
-      "Scikit-learn: Machine Learning in Python.",
-      "Microsoft Responsible AI Standard.",
-      "Trang tin thị trường nông sản Việt Nam và Open-Meteo API."
+      "Breiman, L. (2001). Random Forests. Machine Learning. DOI: 10.1023/A:1010933404324.",
+      "Pedregosa, F. et al. (2011). Scikit-learn: Machine Learning in Python. JMLR 12(85):2825-2830.",
+      "Microsoft Responsible AI Standard v2 & Reference Guide.",
+      "Open-Meteo Historical Weather API.",
+      "Nguồn giá trong manifest: Báo Công Thương, Nông nghiệp & Môi trường, Kinh tế Đô thị, Vinanet."
     ],
-    speakerNotes: "Tổng kết ngắn gọn giá trị cốt lõi nhóm đã đạt được và trích dẫn các nền tảng khoa học nhóm đã sử dụng."
+    speakerNotes: "Các tài liệu tham khảo đã được kiểm tra lại theo nguồn chính thức: bài Random Forest trên Springer DOI 10.1023/A:1010933404324, bài scikit-learn trên Journal of Machine Learning Research, bộ Responsible AI Standard v2 của Microsoft, tài liệu Historical Weather API của Open-Meteo và các trang báo/cổng tin có trong source_manifest.json của crawler."
   },
   {
     id: 16,
