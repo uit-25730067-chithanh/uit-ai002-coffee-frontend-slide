@@ -611,9 +611,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                     <h4 className="text-base font-bold text-blue-900 mb-0.5">
                       {title}
                     </h4>
-                    <p className="text-sm text-gray-700 leading-snug">
-                      {desc}
-                    </p>
+                    <p className="text-sm text-gray-700 leading-snug">{desc}</p>
                   </div>
                 </div>
               );
@@ -1756,7 +1754,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
         <div className="w-full h-full p-8 px-12 flex flex-col bg-white overflow-hidden relative">
           <PPTHeader title={slide.title} />
 
-          <div className="flex-1 flex mt-2 gap-12 relative items-stretch h-full">
+          <div className="flex-1 flex -mt-2 gap-12 relative items-stretch h-full">
             {/* Divider line in middle */}
             <div className="absolute left-[48%] top-0 bottom-8 w-[1px] border-l-2 border-dashed border-gray-200"></div>
 
@@ -2110,7 +2108,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
                   </div>
 
                   {/* Disclaimer Banner below mobile overlaying it */}
-                  <div className="absolute -bottom-[2.5rem] left-1/2 -translate-x-1/2 w-max max-w-[28rem] bg-[#fdf5e6] border border-orange-200 px-6 py-3 rounded-xl flex items-center gap-3 z-30 shadow-md">
+                  <div className="absolute -bottom-[1rem] left-1/2 -translate-x-1/2 w-max max-w-[28rem] bg-[#fdf5e6] border border-orange-200 px-6 py-3 rounded-xl flex items-center gap-3 z-30 shadow-md">
                     <div className="w-8 h-8 rounded-md bg-orange-500 text-white flex items-center justify-center font-bold shrink-0">
                       <svg
                         viewBox="0 0 24 24"
