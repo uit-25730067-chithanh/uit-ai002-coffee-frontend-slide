@@ -1773,51 +1773,19 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
               </div>
 
               <div className="flex-1 flex relative gap-4">
-                {/* Coverage Area */}
-                <div className="flex-1 relative flex flex-col gap-3 pt-4">
-                  {[
-                    {
-                      province: "Kon Tum",
-                      value: "88.2%",
-                      level: "Tốt",
-                      color: "bg-green-50 border-green-200 text-green-800",
-                    },
-                    {
-                      province: "Lâm Đồng",
-                      value: "86.8%",
-                      level: "Tốt",
-                      color: "bg-green-50 border-green-200 text-green-800",
-                    },
-                    {
-                      province: "Đắk Lắk / Gia Lai",
-                      value: "77.6%",
-                      level: "Trung bình",
-                      color: "bg-blue-50 border-blue-200 text-blue-800",
-                    },
-                    {
-                      province: "Đắk Nông",
-                      value: "60.5%",
-                      level: "Cảnh báo",
-                      color: "bg-orange-50 border-orange-200 text-orange-800",
-                    },
-                  ].map((item) => (
-                    <div
-                      key={item.province}
-                      className={`rounded-xl border p-3 shadow-sm ${item.color}`}
-                    >
-                      <div className="flex items-center justify-between gap-3">
-                        <span className="text-[17px] font-bold leading-tight">
-                          {item.province}
-                        </span>
-                        <span className="text-[24px] font-extrabold leading-none">
-                          {item.value}
-                        </span>
-                      </div>
-                      <div className="text-[12px] font-semibold mt-1 opacity-80">
-                        Độ phủ dữ liệu giá quan sát thật: {item.level}
-                      </div>
-                    </div>
-                  ))}
+                {/* Map Area */}
+                <div className="flex-1 relative flex items-start justify-center p-0 pt-0">
+                  <div className="relative w-full h-[28rem] flex items-center justify-center">
+                    <img
+                      src={getImageUrl("/map-bias.png")}
+                      alt="Bản đồ thiên lệch dữ liệu"
+                      className="max-w-[110%] w-full h-full object-contain drop-shadow-sm transition-transform hover:scale-[1.02] origin-top -translate-x-4"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src =
+                          "https://placehold.co/400x500/e2e8f0/1e293b?text=Upload+map-bias.png%0Ato+public+folder";
+                      }}
+                    />
+                  </div>
                 </div>
 
                 {/* Right Legend Area */}
