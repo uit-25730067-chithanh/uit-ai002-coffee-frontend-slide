@@ -4,6 +4,7 @@ node_modules/
 # Production / Builds
 dist/
 build/
+exports/
 
 # Testing
 coverage/

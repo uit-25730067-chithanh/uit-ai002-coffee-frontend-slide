@@ -122,6 +122,22 @@ npm run dev
 
 Bấm biểu tượng mở rộng hoặc nhấn `F11` trên trình duyệt để trình chiếu toàn màn hình. Nhấn `N` trên bàn phím để bật ghi chú thuyết trình nếu cần hỗ trợ nói.
 
+### 4. Xuất PDF và PowerPoint
+
+Xuất slide sạch, không kèm speaker notes:
+
+```bash
+npm run export
+```
+
+File kết quả nằm trong thư mục `exports/`:
+
+- `exports/ai002-coffee-slide-deck.pdf`
+- `exports/ai002-coffee-slide-deck.pptx`
+- `exports/slides/`: ảnh PNG từng slide ở kích thước `1200x675`
+
+PowerPoint được tạo theo dạng ảnh full-slide để giữ layout giống bản web khi trình chiếu.
+
 ---
 
 ## Danh sách Nhóm (Nhóm 10)
