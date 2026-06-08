@@ -84,7 +84,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
 
     case "profile":
       return (
-        <div className="w-full h-full p-16 flex flex-col bg-white">
+        <div className="w-full h-full p-8 flex flex-col bg-white">
           <div className="flex justify-between items-end mb-4">
             <span className="text-lg font-bold text-blue-900 uppercase">
               Trường Đại học Công nghệ Thông tin - ĐHQG-HCM
@@ -126,7 +126,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
 
     case "bullets":
       return (
-        <div className="w-full h-full p-16 flex flex-col bg-white overflow-hidden relative">
+        <div className="w-full h-full p-8 flex flex-col bg-white overflow-hidden relative">
           <PPTHeader title={slide.title} />
 
           <div
@@ -194,7 +194,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
 
     case "split":
       return (
-        <div className="w-full h-full p-16 flex flex-col bg-white">
+        <div className="w-full h-full p-8 flex flex-col bg-white">
           <PPTHeader title={slide.title} />
 
           <div className="flex-1 grid grid-cols-2 gap-16 px-4">
@@ -1177,7 +1177,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
 
     case "metrics":
       return (
-        <div className="w-full h-full p-16 flex flex-col bg-white">
+        <div className="w-full h-full p-8 flex flex-col bg-white">
           <PPTHeader title={slide.title} />
 
           <div className="grid grid-cols-3 gap-8 mb-12">
@@ -1223,10 +1223,10 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
 
     case "chart":
       return (
-        <div className="w-full h-full p-16 flex flex-col bg-white">
+        <div className="w-full h-full p-8 flex flex-col bg-white">
           <PPTHeader title={slide.title} />
 
-          <div className="flex-1 flex flex-col justify-center px-12 mb-8">
+          <div className="flex-1 flex flex-col justify-center px-12 mb-4">
             <h3 className="text-3xl font-bold text-center mb-16 text-blue-900 uppercase">
               Mức Độ Đóng Góp Đặc Trưng (Feature Importance)
             </h3>
