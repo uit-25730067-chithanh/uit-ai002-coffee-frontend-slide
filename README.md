@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" alt="Team 10 Banner" width="100%" style="border-radius: 8px;">
+  <img src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" alt="Team 22 Banner" width="100%" style="border-radius: 8px;">
 
-# [AI002] Slide Web App — AI Dự Báo Canh Tác & Giá Cà Phê — Nhóm 10
+# [AI002] Slide Web App — AI Dự Báo Canh Tác & Giá Cà Phê — Nhóm 22
 
 **Giao diện Slide Thuyết trình Báo cáo Đồ án Cuối kỳ — Môn học Tư duy Trí tuệ Nhân tạo (AI002)**  
 _Đề tài DT10: AI dự báo kế hoạch canh tác mùa vụ và giá cà phê cho nông dân dựa trên 5 Trụ cột của AI Bền vững._
@@ -24,7 +24,7 @@ _Đề tài DT10: AI dự báo kế hoạch canh tác mùa vụ và giá cà ph�
 - [Quy ước Thiết kế & Style Slide](#quy-ước-thiết-kế--style-slide)
 - [Cấu trúc Thư mục](#cấu-trúc-thư-mục)
 - [Hướng dẫn Khởi chạy](#hướng-dẫn-khởi-chạy)
-- [Danh sách Nhóm (Nhóm 10)](#danh-sách-nhóm-nhóm-10)
+- [Danh sách Nhóm (Nhóm 22)](#danh-sách-nhóm-nhóm-22)
 
 ---
 
@@ -38,7 +38,7 @@ _Đề tài DT10: AI dự báo kế hoạch canh tác mùa vụ và giá cà ph�
 
 ## Giới thiệu Slide Web
 
-Đây là ứng dụng web trình diễn slide báo cáo thuyết trình tương tác của **Nhóm 10 — Đề tài DT10**. Được thiết kế để chạy trực tiếp trên trình duyệt web, ứng dụng này thay thế các trang slide tĩnh truyền thống bằng giao diện trực quan hóa dữ liệu động, biểu đồ tương tác, và minh họa luồng xử lý thực tế của mô hình dự báo giá cà phê.
+Đây là ứng dụng web trình diễn slide báo cáo thuyết trình tương tác của **Nhóm 22 — Đề tài DT10**. Được thiết kế để chạy trực tiếp trên trình duyệt web, ứng dụng này thay thế các trang slide tĩnh truyền thống bằng giao diện trực quan hóa dữ liệu động, biểu đồ tương tác, và minh họa luồng xử lý thực tế của mô hình dự báo giá cà phê.
 
 Ứng dụng giúp ban giám khảo và giảng viên theo dõi trực tiếp các kết quả nghiên cứu, từ khâu xử lý dữ liệu, kiến trúc 4 tầng, kết quả huấn luyện (chỉ số MAE, RMSE, R² âm), cho đến các giải pháp hiện thực hóa **5 Trụ cột AI Bền vững** (Reliability, Bias, Robustness, Social Impact, Explainability) trên giao diện.
 
@@ -140,7 +140,7 @@ PowerPoint được tạo theo dạng ảnh full-slide để giữ layout giốn
 
 ---
 
-## Danh sách Nhóm (Nhóm 10)
+## Danh sách Nhóm (Nhóm 22)
 
 | MSSV     | Họ và Tên      | Vai trò                                            | Trục AI Phụ trách                          | GitHub                                                             |
 | :------- | :------------- | :------------------------------------------------- | :----------------------------------------- | :----------------------------------------------------------------- |

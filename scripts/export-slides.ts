@@ -142,7 +142,7 @@ async function writePdf(imagePaths: string[]) {
 async function writePptx(imagePaths: string[]) {
   const { default: PptxGenJS } = await import("pptxgenjs");
   const deck = new PptxGenJS();
-  deck.author = "AI002 Group 10";
+  deck.author = "AI002 Group 22";
   deck.subject = "AI coffee cultivation and price forecasting";
   deck.title = "AI002 Coffee Slide Deck";
   deck.company = "UIT VNU-HCM";

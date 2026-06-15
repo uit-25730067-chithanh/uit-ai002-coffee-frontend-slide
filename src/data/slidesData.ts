@@ -29,7 +29,7 @@ export const slides: Slide[] = [
       { name: "Đặng Chí Thanh", role: "Trưởng nhóm - 25730067" },
       { name: "Hoàng Cao Sơn", role: "Thành viên - 25730061" }
     ],
-    speakerNotes: "Xin chào Thầy và các bạn. Hôm nay Nhóm 10 xin đại diện trình bày đồ án cuối kỳ môn Tư duy Trí tuệ Nhân tạo với đề tài DT10: AI dự báo kế hoạch canh tác mùa vụ và giá cà phê cho nông dân Tây Nguyên. Trọng tâm của đồ án không nằm ở việc xây dựng mô hình Deep Learning phức tạp mà tập trung vào việc áp dụng tư duy thiết kế hệ thống AI bền vững và có trách nhiệm đến tay người nông dân nhỏ lẻ."
+    speakerNotes: "Xin chào Thầy và các bạn. Hôm nay Nhóm 22 xin đại diện trình bày đồ án cuối kỳ môn Tư duy Trí tuệ Nhân tạo với đề tài DT10: AI dự báo kế hoạch canh tác mùa vụ và giá cà phê cho nông dân Tây Nguyên. Trọng tâm của đồ án không nằm ở việc xây dựng mô hình Deep Learning phức tạp mà tập trung vào việc áp dụng tư duy thiết kế hệ thống AI bền vững và có trách nhiệm đến tay người nông dân nhỏ lẻ."
   },
   {
     id: 2,

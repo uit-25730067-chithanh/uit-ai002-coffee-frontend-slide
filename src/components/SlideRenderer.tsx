@@ -23,7 +23,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
           Trường Đại học Công nghệ Thông tin
         </span>
         <span className="text-xs font-bold text-gray-500 mt-1">
-          ĐHQG-HCM | NHÓM 10 - DT10
+          ĐHQG-HCM | NHÓM 22 - DT10
         </span>
       </div>
     </div>
@@ -90,7 +90,7 @@ export default function SlideRenderer({ slide }: { slide: Slide }) {
               Trường Đại học Công nghệ Thông tin - ĐHQG-HCM
             </span>
             <span className="text-sm font-bold text-gray-500">
-              NHÓM 10 - DT10
+              NHÓM 22 - DT10
             </span>
           </div>
           <div className="flex justify-between items-center bg-blue-900 text-white p-6 mb-8 shadow-md">
